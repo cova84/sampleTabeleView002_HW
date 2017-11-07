@@ -44,7 +44,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         //表示したい文字の設定（セルの中には文字、画像も入る）
         cell.textLabel?.text = teaList[indexPath.row]
-        cell.textLabel?.font = UIFont(name: "AmericanTypewriter", size: 16)
+//        cell.textLabel?.font = UIFont(name: "AmericanTypewriter", size: 16)
         cell.textLabel?.lineBreakMode = .byCharWrapping
         //byCharWrappingを変えれば、折り返しとかも可能。
         

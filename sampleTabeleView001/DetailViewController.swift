@@ -36,6 +36,22 @@ class DetailViewController: UIViewController {
     }
     @IBOutlet weak var mySlider: UISlider!
     
+    func setThumbnailImage(image: UIImage?) {
+        
+        myImageViwe.image = image
+        
+        let constraint = NSLayoutConstraint(
+            item: myImageViwe,
+            attribute:NSLayoutAttribute.height,
+            relatedBy:NSLayoutRelation.equal,
+            toItem: myImageViwe,
+            attribute: NSLayoutAttribute.width,
+            multiplier: (image?.size.height)! / (image?.size.width)!,
+            constant:0)
+        
+        NSLayoutConstraint.activate([constraint])
+    }
+    
     // 受け取った行番号を保存しておく変数（箱）
     var passedIndex:Int = -1
 
